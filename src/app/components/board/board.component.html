@@ -1,0 +1,7 @@
+<div class="container col board" id="board">
+  <div *ngFor="let i of rowsArray" class="row">
+    <button *ngFor="let j of columnsArray" class="btn cell col m-1" [class.selected]="isCellOccupied(i, j)" [value]="displayValue(i, j)" (click)="selectedCell(i, j)">
+      {{displayValue(i, j)}}
+    </button>
+  </div>
+</div>

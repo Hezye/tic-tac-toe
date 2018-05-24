@@ -1,0 +1,19 @@
+@import '../../../sass/variables';
+@import '../../../sass/mixins';
+
+.cell {
+    @include border-radius($cell-border-radius);
+    border: $board-border;
+    height: 100px;
+    text-align: center;
+    cursor: pointer;     
+    font-size: 30px;
+}
+
+.selected {
+    background-color: $cell-selected-color;
+}
+
+.cell:hover {
+    background-color: $hover-color;
+ }

@@ -1,0 +1,16 @@
+<div class="container col-md-4 col-sm-6">
+    <h1>{{title}}</h1>
+    <app-game (turnEnded)="onTurnEnded($event)"></app-game>
+    <div class="mt-2">
+        <div class="float-left">
+            <h2 *ngIf="gameState === 0 || gameState === 1">{{game.currentPlayerSymbol + ' Turn'}}</h2>
+            <h2 *ngIf="gameState === 2">{{game.currentPlayerSymbol + ' Wins'}}</h2>
+            <h2 *ngIf="gameState === 3">Draw</h2>
+        </div>
+        <div class="float-right">
+            <button class="btn btn-primary" title="Restart game" (click)="newGame()">
+                <i class="fa fa-repeat" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+</div>
